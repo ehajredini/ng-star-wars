@@ -1,6 +1,7 @@
 .people-wrapper {
-  width: 100%;
-  height: 100%;
+  display: block;
+  height: auto;
+  overflow: auto;
   background-color: rgba(0,0,0,.03);
 }
 

@@ -1,0 +1,26 @@
+.people-detail {
+  padding: 16px;
+
+  .people-detail__name {
+    color: #FFD700;
+  }
+
+  .person-detail__card {
+    margin-bottom: 20px;
+  }
+}
+
+.people-detail-item {
+  margin-bottom: 10px;
+
+  .people-detail-item__label {
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 3px;
+  }
+
+  .people-detail-item__value {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

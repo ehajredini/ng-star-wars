@@ -1,3 +1,17 @@
-<p>
-  people-list works!
-</p>
+<div class="people-wrapper">
+  <div class="people-list">
+    <mat-list matSort (matSortChange)="sortData($event)">
+      <mat-form-field class="search">
+        <input matInput (keyup)="search($event.target.value)" placeholder="Search">
+      </mat-form-field>
+      <h3 mat-subheader mat-sort-header="name">People</h3>
+      <mat-list-item class="list-item" [class.selected]="person === selectedPerson" *ngFor="let person of sortedPeople" (click)="selectPerson(person)">
+        <h3 matLine> {{person.name}} </h3>
+        <p matLine class="list-item__details"> {{person.gender}} </p>
+        <p matLine class="list-item__details"> {{person.birth_year}} </p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+  <app-people-detail [person]="selectedPerson" class="people-detail-wrapper"></app-people-detail>
+</div>

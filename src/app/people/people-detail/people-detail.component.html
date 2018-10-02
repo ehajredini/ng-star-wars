@@ -1,0 +1,78 @@
+<div class="people-detail" *ngIf="person">
+  <h2 class="people-detail__name">{{person.name}}</h2>
+
+  <mat-card class="person-detail__card">
+    <mat-card-title>
+      Details
+    </mat-card-title>
+    <div class="people-detail-item">
+      <div class="people-detail-item__label">
+        Name
+      </div>
+      <div class="people-detail__value">
+        {{person.name}}
+      </div>
+    </div>
+    <div class="people-detail-item">
+      <div class="people-detail-item__label">
+        Gender
+      </div>
+      <div class="people-detail__value">
+        {{person.gender}}
+      </div>
+    </div>
+    <div class="people-detail-item">
+      <div class="people-detail-item__label">
+        Birth Year
+      </div>
+      <div class="people-detail__value">
+        {{person.birth_year}}
+      </div>
+    </div>
+
+    <div class="people-detail-item">
+      <div class="people-detail-item__label">
+        Planet
+      </div>
+      <div class="people-detail__value">
+        {{planet?.name}}
+      </div>
+    </div>
+
+  </mat-card>
+
+  <mat-card *ngIf="planet">
+    <mat-card-title>
+      People at the same planet
+    </mat-card-title>
+
+    <mat-card *ngFor="let resident of residents">
+      <div class="people-detail-item">
+        <div class="people-detail-item__label">
+          Name
+        </div>
+        <div class="people-detail__value">
+          {{resident.name}}
+        </div>
+      </div>
+      <div class="people-detail-item">
+        <div class="people-detail-item__label">
+          Gender
+        </div>
+        <div class="people-detail__value">
+          {{resident.gender}}
+        </div>
+      </div>
+      <div class="people-detail-item">
+        <div class="people-detail-item__label">
+          Birth Year
+        </div>
+        <div class="people-detail__value">
+          {{resident.birth_year}}
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-card>
+
+  </mat-card>
+</div>

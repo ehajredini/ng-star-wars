@@ -1,0 +1,43 @@
+.people-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.03);
+}
+
+
+.people-list {
+  background-color: #ffffff;
+  float: left;
+  width: 245px;
+  border-right: 1px solid rgba(0,0,0,.1);
+
+  .search {
+    padding-left: 16px;
+  }
+
+  .list-item {
+    .list-item__details {
+      color: #666666;
+    }
+
+    &.selected {
+      background-color: rgba(0,0,0,.1);
+       h3 {
+         font-weight: 700;
+       }
+    }
+
+    &.mat-list-item {
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(0,0,0,.1);
+      }
+    }
+  }
+}
+
+.people-detail-wrapper {
+  float: left;
+  width: calc(100% - 246px);
+}

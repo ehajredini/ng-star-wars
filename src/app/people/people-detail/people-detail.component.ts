@@ -1,8 +1,9 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { People } from '../shared/people';
 import { PeopleService } from '../shared/people.service';
 import { forkJoin } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Planet } from '../shared/planet';
 
 @Component({
   selector: 'app-people-detail',
@@ -11,8 +12,8 @@ import { switchMap } from 'rxjs/operators';
 })
 export class PeopleDetailComponent implements OnInit, OnChanges {
   @Input() person: People;
-  planet: any;
-  residents: any;
+  planet: Planet;
+  residents: People[];
 
   constructor(private peopleService: PeopleService) { }
 
@@ -35,7 +36,7 @@ export class PeopleDetailComponent implements OnInit, OnChanges {
               }));
           }
         })).subscribe(residents => {
-          this.residents = residents;
+          this.residents = <People[]>residents;
       });
     }
   }

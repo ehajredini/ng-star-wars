@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { People } from './people';
 import { environment } from '../../../environments/environment';
-import {ApiResponse} from '../../shared/api-response';
+import { ApiResponse } from '../../shared/api-response';
+import { Planet } from './planet';
 
 @Injectable({
   providedIn: 'root'
@@ -17,15 +18,11 @@ export class PeopleService {
     return this.http.get<ApiResponse<People[]>>(url);
   }
 
-  getById(id: string): Observable<ApiResponse<People>> {
-    return this.http.get<ApiResponse<People>>(`${environment.BASE_API_URL}/people/${id}/`);
-  }
-
-  getByUrl(url: string): Observable<any> {
-    return this.http.get<ApiResponse<People>>(url);
+  getByUrl(url: string): Observable<People> {
+    return this.http.get<People>(url);
   }
 
   getPlanet(url: string) {
-    return this.http.get<any>(url);
+    return this.http.get<Planet>(url);
   }
 }

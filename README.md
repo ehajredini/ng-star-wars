@@ -1,6 +1,10 @@
 # StarWars
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0 and developed by Ekrem Hajredini
+
+## Install
+
+Run `npm install` to install node modules
 
 ## Development server
 

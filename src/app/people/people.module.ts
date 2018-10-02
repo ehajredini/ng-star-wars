@@ -5,15 +5,13 @@ import { PeopleListComponent } from './people-list/people-list.component';
 import { peopleRouting } from './people-routing.module';
 import { PeopleService } from './shared/people.service';
 import {
-  MatButtonModule, MatCardModule,
+  MatCardModule,
   MatFormFieldModule,
   MatIconModule,
-  MatInputModule, MatListModule,
-  MatPaginatorModule,
-  MatSortModule,
-  MatTableModule
+  MatInputModule,
+  MatListModule,
+  MatSortModule
 } from '@angular/material';
-import {CdkTableModule} from '@angular/cdk/table';
 import { PeopleDetailComponent } from './people-detail/people-detail.component';
 
 @NgModule({
@@ -21,14 +19,9 @@ import { PeopleDetailComponent } from './people-detail/people-detail.component';
     CommonModule,
     peopleRouting,
     MatFormFieldModule,
-    MatPaginatorModule,
-    CdkTableModule,
-    MatButtonModule,
     MatIconModule,
     MatInputModule,
-    MatPaginatorModule,
     MatSortModule,
-    MatTableModule,
     MatCardModule,
     MatListModule
   ],

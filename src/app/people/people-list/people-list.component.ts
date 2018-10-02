@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PeopleService } from '../shared/people.service';
 import { People } from '../shared/people';
 import { Sort } from '@angular/material';

@@ -20,6 +20,7 @@ export class PeopleListComponent implements OnInit {
     this.peopleService.getAll().subscribe(res => {
       this.people = res.results;
       this.sortedPeople = res.results.slice();
+      this.selectedPerson = res.results[0];
     });
   }
 
